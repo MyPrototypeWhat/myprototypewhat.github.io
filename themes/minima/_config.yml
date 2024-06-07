@@ -11,8 +11,8 @@ desc: "不努力就回家躺平"
 
 #menu
 menu:
-  Works: /Works
-  About: /About
+  目录: /archives
+  # About: /About
 
 #index/main page max show posts (in number)
 max_post: 6

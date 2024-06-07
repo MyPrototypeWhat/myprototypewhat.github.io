@@ -7,7 +7,7 @@
   </div>
 </div>
 
-<h3>Recent Posts</h3>
+<h3>最新</h3>
 
 <% site.posts.sort('date', 'desc').limit(theme.max_post).forEach(function(post){ %>
 <div class="row">
@@ -27,4 +27,4 @@
 </div>
 <% }) %>
 
-<h4> <a href="<%= config.root %>archives">All Posts</a></h4>
+<h4> <a href="<%= config.root %>archives">所有</a></h4>
