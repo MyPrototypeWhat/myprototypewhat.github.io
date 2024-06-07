@@ -43,7 +43,7 @@
         <%if(post.excerpt){%>
           <%- strip_html(post.excerpt) %>
         <%}else{%>
-          <%- strip_html(truncate(post.content,{length:150})) %>
+          <%- strip_html(truncate(post.content,{length:1000})) %>
         <%}%>
       </section>
       
