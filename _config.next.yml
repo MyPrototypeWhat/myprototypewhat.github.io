@@ -39,7 +39,7 @@ custom_file_path:
 # scheme: Muse
 # scheme: Mist
 scheme: Pisces
-#scheme: Gemini
+# scheme: Gemini
 # Dark Mode
 darkmode: false
 
@@ -75,13 +75,13 @@ creative_commons:
 open_graph:
   enable: true
   options:
-    #twitter_card: <twitter:card>
-    #twitter_id: <twitter:creator>
-    #twitter_site: <twitter:site>
-    #twitter_image: <twitter:image>
-    #google_plus: <g+:profile_link>
-    #fb_admins: <fb:admin_id>
-    #fb_app_id: <fb:app_id>
+    # twitter_card: <twitter:card>
+    # twitter_id: <twitter:creator>
+    # twitter_site: <twitter:site>
+    # twitter_image: <twitter:image>
+    # google_plus: <g+:profile_link>
+    # fb_admins: <fb:admin_id>
+    # fb_app_id: <fb:app_id>
 
 # ---------------------------------------------------------------
 # Menu Settings
@@ -117,7 +117,7 @@ sidebar:
 
   # Sidebar width.
   # Applicable to Muse | Mist and mobile of Pisces | Gemini.
-  width_expanded: 320
+  width_expanded: 220
   # Applicable to desktop of Pisces | Gemini.
   width_dual_column: 240
 
@@ -634,7 +634,7 @@ pace:
   # All available themes:
   # big-counter | bounce | barber-shop | center-atom | center-circle | center-radar | center-simple
   # corner-indicator | fill-left | flat-top | flash | loading-bar | mac-osx | material | minimal
-  theme: loading-bar
+  theme: flash
 
 # Generate a ribbon in your website with HTML5 canvas.
 # For more information: https://github.com/hustcc/ribbon.js
