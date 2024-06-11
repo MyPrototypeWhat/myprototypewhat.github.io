@@ -1,5 +1,5 @@
 ---
-title: React源码解析---React-schduler
+title: React源码解析---React-scheduler
 toc: true
 tags:
   - React
