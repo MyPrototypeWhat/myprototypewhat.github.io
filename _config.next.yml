@@ -705,7 +705,7 @@ livere_uid: # <your_uid>
 gitalk:
   enable: true
   github_id: MyPrototypeWhat # GitHub repo owner
-  repo: https://github.com/MyPrototypeWhat/myprototypewhat.github.io # Repository name to store issues
+  repo: myprototypewhat.github.io # Repository name to store issues
   client_id: Ov23liJqWC6NatdUM041 # GitHub Application Client ID
   client_secret: 5803a988d7817b82cbc4449ee9c2045e702fee23 # GitHub Application Client Secret
   admin_user: MyPrototypeWhat # GitHub repo owner and collaborators, only these guys can initialize gitHub issues
