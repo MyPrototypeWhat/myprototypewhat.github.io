@@ -359,16 +359,16 @@ codeblock:
     light: default
     dark: stackoverflow-dark
   prism:
-    light: prism
-    dark: prism-dark
+    light: prism-dracula.min
+    dark: prism-dracula.min
   # Add copy button on codeblock
   copy_button:
-    enable: false
+    enable: true
     # Available values: default | flat | mac
-    style:
+    style: flat
   # Fold code block
   fold:
-    enable: false
+    enable: true
     height: 500
 
 back2top:
