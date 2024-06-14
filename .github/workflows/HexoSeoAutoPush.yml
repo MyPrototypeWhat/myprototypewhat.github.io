@@ -12,10 +12,6 @@ jobs:
       - uses: actions/setup-node@main
         with:
           node-version: latest
-      - run: |
-          npm init -y
-          npm install hexo-seo-autopush
-
       - name: google push
         run: npx hexoautopush ${{secrets.google_client_email}} ${{secrets.google_private_key}}
 

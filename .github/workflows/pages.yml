@@ -31,6 +31,13 @@ jobs:
         run: npm install
       - name: Build
         run: npm run build
+      - name: google push
+        run: npx hexoautopush ${{secrets.google_client_email}} ${{secrets.google_private_key}}
+      - name: bing push
+        run: curl -X POST "https://ssl.bing.com/webmaster/api.svc/json/SubmitUrlBatch?apikey=${{secrets.bing_apikey}}" -H "Content-Type:application/json" -H "charset:utf-8" -d @bing.json
+      - name: baidu push
+        run: curl -H "Content-Type:text/plain" --data-binary @baidu.txt "http://data.zz.baidu.com/urls?site=https://myprototypewhat.github.io&token=${{secrets.baidu_token}}"
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
