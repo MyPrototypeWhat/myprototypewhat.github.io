@@ -22,6 +22,6 @@ jobs:
         env:
           PUBLIC_PATH: ${{ env.PUBLIC_PATH }}
       - name: baidu push
-        run: curl -H "Content-Type:text/plain" --data-binary @@${{PUBLIC_PATH}}/baidu.txt "http://data.zz.baidu.com/urls?site=https://myprototypewhat.github.io&token=${{secrets.baidu_token}}"
+        run: curl -H "Content-Type:text/plain" --data-binary @${{PUBLIC_PATH}}/baidu.txt "http://data.zz.baidu.com/urls?site=https://myprototypewhat.github.io&token=${{secrets.baidu_token}}"
         env:
           PUBLIC_PATH: ${{ env.PUBLIC_PATH }}
