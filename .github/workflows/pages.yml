@@ -31,10 +31,15 @@ jobs:
         run: npm install
       - name: Build
         run: npm run build
+      - name: Set GitHub Path
+        run: echo "$GITHUB_ACTION_PATH" >> $GITHUB_PATH
+        shell: bash
+        env:
+          GITHUB_ACTION_PATH: ${{ github.action_path }}
       - name: bing push
-        run: curl -X POST "https://ssl.bing.com/webmaster/api.svc/json/SubmitUrlBatch?apikey=${{secrets.bing_apikey}}" -H "Content-Type:application/json" -H "charset:utf-8" -d @${{ github.action_path }}/bing.json
+        run: curl -X POST "https://ssl.bing.com/webmaster/api.svc/json/SubmitUrlBatch?apikey=${{secrets.bing_apikey}}" -H "Content-Type:application/json" -H "charset:utf-8" -d @${{ GITHUB_ACTION_PATH }}/bing.json
       - name: baidu push
-        run: curl -H "Content-Type:text/plain" --data-binary @${{ github.action_path }}/baidu.txt "http://data.zz.baidu.com/urls?site=https://myprototypewhat.github.io&token=${{secrets.baidu_token}}"
+        run: curl -H "Content-Type:text/plain" --data-binary @${{ GITHUB_ACTION_PATH }}/baidu.txt "http://data.zz.baidu.com/urls?site=https://myprototypewhat.github.io&token=${{secrets.baidu_token}}"
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
