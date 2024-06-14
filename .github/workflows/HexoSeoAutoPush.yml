@@ -1,16 +1,14 @@
 name: Hexo SEO Auto Push
 
 on:
-  schedule:
-    - cron: 00 12 * * *
-  watch:
-    types: [started]
+  push:
+    branches:
+      - master # default branch
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: github.event.repository.owner.id == github.event.sender.id || github.event_name == 'schedule'
     steps:
-      - uses: actions/checkout@main
+      - uses: actions/checkout@v4
       - uses: actions/setup-node@main
         with:
           node-version: latest
