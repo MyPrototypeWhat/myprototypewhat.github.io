@@ -124,10 +124,10 @@ hexo_seo_autopush:
     date: created
     count: 10
   bing:
-    enable: false
+    enable: true
     date: created
     count: 10
   google:
-    enable: false
+    enable: true
     date: created
     count: 10
