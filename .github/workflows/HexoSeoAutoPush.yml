@@ -2,7 +2,7 @@ name: Hexo SEO Auto Push
 
 on:
   schedule:
-    - cron: 50 19 * * *
+    - cron: 55 11 * * *
   watch:
     types: [started]
 jobs:
