@@ -31,13 +31,6 @@ jobs:
         run: npm install
       - name: Build
         run: npm run build
-      - name: Cache public
-        uses: actions/cache@v4
-        with:
-          path: public
-          key: ${{ runner.OS }}-public
-          restore-keys: |
-            ${{ runner.OS }}-public
       - name: google push
         working-directory: ./public
         run: npx hexoautopush ${{secrets.google_client_email}} ${{secrets.google_private_key}}
