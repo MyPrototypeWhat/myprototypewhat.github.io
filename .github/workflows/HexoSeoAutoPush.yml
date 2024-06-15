@@ -19,9 +19,9 @@ jobs:
           npm install hexo-seo-autopush
 
       - name: bing push
-        working-directory: ./public
+        working-directory: public
         run: curl -X POST "https://ssl.bing.com/webmaster/api.svc/json/SubmitUrlBatch?apikey=${{secrets.bing_apikey}}" -H "Content-Type:application/json" -H "charset:utf-8" -d @bing.json
 
       - name: baidu push
-        working-directory: ./public
+        working-directory: public
         run: curl -H "Content-Type:text/plain" --data-binary @baidu.txt "http://data.zz.baidu.com/urls?site=https://myprototypewhat.cn&token=${{secrets.baidu_token}}"
