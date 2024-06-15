@@ -10,13 +10,16 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id || github.event_name == 'schedule'
     steps:
-      - uses: actions/checkout@main
+      # - uses: actions/checkout@main
       - uses: actions/setup-node@main
         with:
           node-version: latest
       - run: |
           npm init -y
           npm install hexo-seo-autopush
+
+      - name: log ls
+        run: ls -alh
 
       - name: bing push
         working-directory: public
