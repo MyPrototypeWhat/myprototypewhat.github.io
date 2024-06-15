@@ -1,0 +1,22 @@
+name: Hexo SEO Auto Push
+
+on:
+  schedule:
+    - cron: 0 4 * * *
+  watch:
+    types: [started]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id || github.event_name == 'schedule'
+    steps:
+      - uses: actions/checkout@main
+      - uses: actions/setup-node@main
+        with:
+          node-version: latest
+      - run: |
+          npm init -y
+          npm install hexo-seo-autopush
+
+      - name: List current directory
+        run: ls -alh
