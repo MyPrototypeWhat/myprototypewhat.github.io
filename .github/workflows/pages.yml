@@ -31,6 +31,9 @@ jobs:
         run: npm install
       - name: Build
         run: npm run build
+      - name: google push
+        working-directory: ./public
+        run: npx hexoautopush ${{secrets.google_client_email}} ${{secrets.google_private_key}}
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
