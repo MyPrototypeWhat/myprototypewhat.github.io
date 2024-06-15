@@ -20,3 +20,6 @@ jobs:
 
       - name: List current directory
         run: ls -alh
+      - name: google push
+        working-directory: ./public
+        run: npx hexoautopush ${{secrets.google_client_email}} ${{secrets.google_private_key}}
